@@ -9,9 +9,9 @@ interface Props {
 
 export default function Album(props: Props) {
   return (
-    <div className="flex flex-col gap-2 justify-center items-center text-center border-4 border-cor2 p-4 rounded-3xl lg:flex-row lg:gap-8">
+    <div className="flex flex-col gap-2 justify-center items-center text-center border-4 border-cor2 p-4 rounded-3xl lg:flex-row lg:gap-8 w-[80%] lg:w-[1000px]">
       <div>
-        <img className="w-60 rounded-3xl lg:w-96" src="/Img1.jpg" />
+        <img className="w-60 rounded-3xl lg:w-96" src={`/Img1.jpg`} />
       </div>
       <div className="flex flex-col lg:gap-12">
         <p>
@@ -27,7 +27,7 @@ export default function Album(props: Props) {
         <p>Album ID: {props.Album.album_id}</p>
         <p>Faixas: {props.Album.musicas.length}</p>
       </div>
-      <ul className="border-4 border-cor2 p-2 rounded-2xl flex-col flex gap-2">
+      <ul className="border-4 border-cor2 p-2 rounded-2xl flex-col flex gap-2 text-xs">
         {props.Album.musicas.map((musica, index) => (
           <li key={index}>
             <span>Nome da faixa: {musica.nome}</span>

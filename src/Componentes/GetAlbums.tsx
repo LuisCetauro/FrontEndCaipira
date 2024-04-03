@@ -14,6 +14,7 @@ export default function GetAlbums() {
       const response = await axios.get("http://127.0.0.1:8000/Albums");
       const respostaFiltrada = response.data.data;
 
+      console.log(respostaFiltrada);
       setAlbums(respostaFiltrada);
     } catch (error) {
       console.error("Erro ao buscar dados dos álbuns:", error);

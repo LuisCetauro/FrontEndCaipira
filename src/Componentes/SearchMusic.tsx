@@ -49,10 +49,17 @@ export default function SearchSong() {
       </div>
       <div>
         {songAchado && (
-          <div className="flex flex-col gap-2 border-4 border-cor2 w-40 rounded-2xl lg:w-96 lg:gap-8">
-            <h1 className="lg:mt-8">Música:{songData.data[0].nome}</h1>
-            <p>Album:{songData.data[0].album.nome}</p>
-            <p className="lg:mb-8">TrackID:{songData.data[0].trackid}</p>
+          <div>
+            {songData.data.map((song: any, index: any) => (
+              <div
+                key={index}
+                className="flex flex-col gap-2 border-4 border-cor2 w-40 mb-4 p-2 rounded-2xl lg:w-96 lg:gap-8"
+              >
+                <h1 className="lg:mt-8">Música: {song.nome}</h1>
+                <p>Album: {song.album.nome}</p>
+                <p className="lg:mb-8">TrackID: {song.trackid}</p>
+              </div>
+            ))}
           </div>
         )}
       </div>

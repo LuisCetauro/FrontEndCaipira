@@ -70,6 +70,7 @@ export default function DeleteSong() {
         <div>
           <h1>Música deletada com Sucesso</h1>
           <button
+            className="mt-4 border-4 border-cor3 p-3 rounded-2xl"
             onClick={() => {
               navigate("/");
             }}

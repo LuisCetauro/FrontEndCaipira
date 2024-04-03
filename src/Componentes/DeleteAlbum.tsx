@@ -45,6 +45,7 @@ export default function DeleteAlbum() {
         <div>
           <h1>Album Deletado com Sucesso</h1>
           <button
+            className="mt-4 border-4 border-cor3 p-3 rounded-2xl"
             onClick={() => {
               navigate("/");
             }}

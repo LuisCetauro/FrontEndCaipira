@@ -1,6 +1,6 @@
-import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 export default function PostSong() {
   const navigate = useNavigate();
@@ -9,17 +9,30 @@ export default function PostSong() {
     nome: "",
     album_id: "",
     trackid: "",
+    albumNome: "",
   });
 
   const postNewSong = async () => {
-    if (!songData.nome || !songData.album_id || !songData.trackid) {
+    if (
+      !songData.nome ||
+      !songData.album_id ||
+      !songData.trackid ||
+      !songData.albumNome
+    ) {
       alert("Por favor, preencha todos os campos obrigatórios.");
       return;
     }
 
     try {
-      await axios.post("http://localhost:8000/Songs", songData);
+      await axios.post(
+        `http://localhost:8000/Albums/${songData.albumNome}/songs`,
+        songData
+      );
+
       setAddedSong(true);
+      setTimeout(() => {
+        setAddedSong(false);
+      }, 3000);
     } catch (error) {
       console.error("Erro ao adicionar nova música:", error);
     }
@@ -60,6 +73,15 @@ export default function PostSong() {
             />
           </div>
           <div className="border-4 border-cor2 p-1 flex flex-row gap-2 rounded-2xl">
+            <label>Nome do Album:</label>
+            <input
+              type="text"
+              name="albumNome"
+              value={songData.albumNome}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="border-4 border-cor2 p-1 flex flex-row gap-2 rounded-2xl">
             <label>TrackId:</label>
             <input
               type="text"
@@ -72,7 +94,7 @@ export default function PostSong() {
             className="border-4 border-cor3 w-4/5 ml-6 rounded-2xl"
             type="submit"
           >
-            Adionar Música
+            Adicionar Música
           </button>
         </form>
         {addedSong && (

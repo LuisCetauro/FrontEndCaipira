@@ -4,6 +4,7 @@ import { useState } from "react";
 interface AlbumData {
   nome: string;
   ano: number;
+  album_id: number;
   musicas: Array<{ nome: string; trackid: number }>;
 }
 
@@ -21,12 +22,15 @@ export default function SearchAlbum() {
     if (!albumProcurado) {
       return;
     }
+
     try {
       const res = await axios.get(
         `http://127.0.0.1:8000/Albums/${albumProcurado}`
       );
+
       if (res.data) {
         setAlbumData(res.data);
+
         setAlbumAchado(true);
         setAlbumNaoAchado(false);
       } else {
@@ -63,7 +67,7 @@ export default function SearchAlbum() {
         {albumAchado && albumData && (
           <div className="flex flex-col gap-2 border-4 border-cor2 w-72 rounded-lg p-4 lg:flex-row lg:w-full lg:gap-12">
             <div className="lg:w-96">
-              <img src="/Img1.jpg" />
+              <img className="rounded-3xl" src={`/Img1.jpg`} />
             </div>
             <div className="flex flex-col gap-4 lg:gap-28 lg:mt-10">
               <h1>Título:{albumData.nome}</h1>
