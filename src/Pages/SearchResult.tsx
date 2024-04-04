@@ -4,7 +4,7 @@ import SearchSong from "../Componentes/SearchMusic";
 
 export default function SearchData() {
   const [dataType, setDataType] = useState(true);
-  const textos = ["Procurando uma música?", "Procurando um Albúm?"];
+  const textos = ["Procurando uma música?", "Procurando um álbum?"];
   const [text, setText] = useState(textos[0]);
 
   const handleTexto = () => {

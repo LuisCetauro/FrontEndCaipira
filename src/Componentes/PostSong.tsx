@@ -73,7 +73,7 @@ export default function PostSong() {
             />
           </div>
           <div className="border-4 border-cor2 p-1 flex flex-row gap-2 rounded-2xl">
-            <label>Nome do Album:</label>
+            <label>Nome do Álbum:</label>
             <input
               type="text"
               name="albumNome"

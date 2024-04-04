@@ -27,7 +27,7 @@ export default function GetAlbums() {
 
   return (
     <div className="flex flex-col gap-8 justify-center items-center">
-      <h2>Albums:</h2>
+      <h2>Álbums:</h2>
       <button
         className="border-4 border-cor3 w-2/5 rounded-2xl p-1 lg:w-1/5"
         onClick={pegarTodosAlbums}

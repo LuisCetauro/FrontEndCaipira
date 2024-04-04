@@ -4,7 +4,7 @@ import DeleteSong from "../Componentes/DeleteSong";
 
 export default function DeleteData() {
   const [dataType, setDataType] = useState(true);
-  const textos = ["Delete uma música", "Delete um Album"];
+  const textos = ["Delete uma música", "Delete um álbum"];
   const [text, setText] = useState(textos[0]);
 
   const handleTexto = () => {

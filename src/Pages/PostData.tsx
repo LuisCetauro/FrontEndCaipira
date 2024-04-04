@@ -4,7 +4,7 @@ import PostSong from "../Componentes/PostSong";
 
 export default function PostData() {
   const [dataType, setDataType] = useState(true);
-  const textos = ["Adicione Uma Música", "Adicione um Album"];
+  const textos = ["Adicione uma música", "Adicione um álbum"];
   const [text, setText] = useState(textos[0]);
 
   const handleTexto = () => {

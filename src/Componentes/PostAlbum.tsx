@@ -36,7 +36,7 @@ export default function PostAlbum() {
   {
     return (
       <div className="border-4 border-cor2 rounded-3xl p-4 text-center flex flex-col gap-4 lg:w-96">
-        <h1>Adicione um novo Album</h1>
+        <h1>Adicione um novo álbum</h1>
         <form
           className="flex flex-col gap-4"
           onSubmit={(e) => {

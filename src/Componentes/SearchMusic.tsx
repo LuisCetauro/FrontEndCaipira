@@ -32,7 +32,7 @@ export default function SearchSong() {
     <div className=" text-center flex-col flex justify-center items-center gap-4  ">
       <h1>Músicas</h1>
       <div className="border-4 border-cor2 w-4/5 p-4 rounded-2xl flex flex-col justify-center items-center lg:w-2/5">
-        <label className="mb-2">Nome Da musica:</label>
+        <label className="mb-2">Nome Da Música:</label>
         <input
           className="border-4 border-cor2 rounded-2xl mb-2 text-center"
           type="text"
@@ -56,7 +56,7 @@ export default function SearchSong() {
                 className="flex flex-col gap-2 border-4 border-cor2 w-40 mb-4 p-2 rounded-2xl lg:w-96 lg:gap-8"
               >
                 <h1 className="lg:mt-8">Música: {song.nome}</h1>
-                <p>Album: {song.album.nome}</p>
+                <p>Álbum: {song.album.nome}</p>
                 <p className="lg:mb-8">TrackID: {song.trackid}</p>
               </div>
             ))}

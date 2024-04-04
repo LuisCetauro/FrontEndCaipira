@@ -43,7 +43,7 @@ export default function DeleteAlbum() {
       </form>
       {albumDeletado && (
         <div>
-          <h1>Album Deletado com Sucesso</h1>
+          <h1>Álbum Deletado com Sucesso</h1>
           <button
             className="mt-4 border-4 border-cor3 p-3 rounded-2xl"
             onClick={() => {

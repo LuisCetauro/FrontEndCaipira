@@ -24,7 +24,7 @@ export default function Album(props: Props) {
           <br />
           {props.Album.ano}
         </p>
-        <p>Album ID: {props.Album.album_id}</p>
+        <p>Álbum ID: {props.Album.album_id}</p>
         <p>Faixas: {props.Album.musicas.length}</p>
       </div>
       <ul className="border-4 border-cor2 p-2 rounded-2xl flex-col flex gap-2 text-xs">

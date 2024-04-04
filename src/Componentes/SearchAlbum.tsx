@@ -46,7 +46,7 @@ export default function SearchAlbum() {
 
   return (
     <div className="text-center flex-col flex justify-center items-center gap-4 ">
-      <h1>Albums:</h1>
+      <h1>Álbuns:</h1>
       <div className="border-4 border-cor2 w-4/5 p-4 rounded-2xl flex flex-col justify-center items-center lg:w-2/5">
         <label className="mb-2">Nome do Álbum:</label>
         <input

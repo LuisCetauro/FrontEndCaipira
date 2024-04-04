@@ -10,7 +10,7 @@ export default function NavBar() {
       </div>
       <div className="mt-4">
         <Link className="border-2 border-cor2 p-2 rounded-2xl" to="/Search">
-          Pesquisar
+          Pesquise
         </Link>
       </div>
       <div className="mt-4">
@@ -20,7 +20,7 @@ export default function NavBar() {
       </div>
       <div className="mt-4">
         <Link className="border-2 border-cor2 p-2 rounded-2xl" to="/Delete">
-          Deletar
+          Delete
         </Link>
       </div>
     </div>
